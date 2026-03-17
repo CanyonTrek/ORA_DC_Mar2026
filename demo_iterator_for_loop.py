@@ -6,6 +6,9 @@
 """ 
     DocString
 """
+import sys
+from tkinter.ttk import Label
+
 #               0          1         2       3         4        5
 students = ['brianna', 'sharath', 'john', 'savita', 'celso', 'sofia']
 
@@ -30,3 +33,10 @@ for (idx, name) in enumerate(students, start=0):
     print(name.title(), end="\n")
     students[idx] = name.title()
 print("Students: ", students)
+
+try:
+    sys.exit(10) # Explicit EXIT with return code (0=success, 1-255=error)
+    # sys.exit("Goodbye") # Explicit EXIT (message-> STDERR) + code of 1
+except SystemExit:
+    print("exiting..")
+    sys.exit(0)
