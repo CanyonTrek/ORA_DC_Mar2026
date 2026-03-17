@@ -7,7 +7,6 @@
     DocString
 """
 import sys
-from tkinter.ttk import Label
 
 #               0          1         2       3         4        5
 students = ['brianna', 'sharath', 'john', 'savita', 'celso', 'sofia']
