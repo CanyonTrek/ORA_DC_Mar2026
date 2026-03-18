@@ -5,7 +5,7 @@
 """ 
     DocString
 """
-
+import sys
 movies = { 'joe': ['underworld', 'blade', 'twilight'],
            'brianna': ['the notebook', 'inside out',  'the gentleman'],
            'dayane': ['iron man', 'transformers', 'resident evil'],
@@ -16,8 +16,9 @@ fh_out = open(r"f:\labs\projects\ORA_DC_Mar2026\movies.txt", mode="wt")
 
 # Iterate through the dict keys and write movie info to file
 for name in movies.keys():
-    print(f"{name} {movies[name]}", end="\n")
-    fh_out.write(f"{name} {movies[name]}\n")
+    print(f"{name} {movies[name]}", end="\n", file=sys.stdout)
+    print(f"{name} {movies[name]}", end="\n", file=fh_out)
+    #fh_out.write(f"{name} {movies[name]}\n")
 
 # fh_out.flush() # Flush buffers
 fh_out.close() # Flush buffers and close file handle
