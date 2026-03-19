@@ -24,11 +24,17 @@ def div(x, z):
     """ Return QUOTIENT of x divided by z to 3 decimal places """
     return round(x/z, 3)
 
-print("----------- BASIC Calc App------------")
-print(f"4 + 3 + 2 + 1 = {add(4, 3, 2, 1)}")
-print(f"4 * 3 * 2 = {mul(4, 3, 2)}")
-print(f"4 / 3 = {div(4, 3)}")
-print("--------------------------------------")
+def main():
+    print("----------- BASIC Calc App------------")
+    print(f"4 + 3 + 2 + 1 = {add(4, 3, 2, 1)}")
+    print(f"4 * 3 * 2 = {mul(4, 3, 2)}")
+    print(f"4 / 3 = {div(4, 3)}")
+    print("--------------------------------------")
+    return None
 
-
-sys.exit(0) # Explicit EXIT with error code
+# Namespace Trick
+if __name__ == "__main__":
+    # Execute if RAN DIRECTLY as a program
+    # Ignored if imported as a module
+    main()
+    sys.exit(0) # Explicit EXIT with error code

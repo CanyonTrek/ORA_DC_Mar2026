@@ -19,11 +19,17 @@ def sqrt(x):
     """ Square root of x to 3 decimal places """
     return round(x**0.5, 3)
 
+def main():
+    print("----------- Adv Calc App------------")
+    print(f"9 ** 8 = {power(9, 8)}")
+    print(f"99 % 88 = {mod(99, 88)}")
+    print(f"\N{square root}99 = {sqrt(99)}")
+    print("------------------------------------")
+    return None
 
-print("----------- Adv Calc App------------")
-print(f"9 ** 8 = {power(9, 8)}")
-print(f"99 % 88 = {mod(99, 88)}")
-print(f"\N{square root}99 = {sqrt(99)}")
-print("------------------------------------")
-
-sys.exit(0) # Explicit EXIT with error code
+# Namespace Trick
+if __name__ == "__main__":
+    # Execute if RAN DIRECTLY as a program
+    # Ignored if imported as a module
+    main()
+    sys.exit(0) # Explicit EXIT with error code
