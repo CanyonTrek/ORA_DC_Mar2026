@@ -5,6 +5,7 @@
 """ 
     Calc App with advanced power, modulus and square root functions
 """
+import sys
 
 def power(x, z):
     """ Return x to the power z as a float """
@@ -24,3 +25,5 @@ print(f"9 ** 8 = {power(9, 8)}")
 print(f"99 % 88 = {mod(99, 88)}")
 print(f"\N{square root}99 = {sqrt(99)}")
 print("------------------------------------")
+
+sys.exit(0) # Explicit EXIT with error code

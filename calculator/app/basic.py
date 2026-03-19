@@ -5,7 +5,7 @@
 """ 
     Calc App with add, multiply and divide functions
 """
-
+import sys
 def add(*args):
     """ Return SUM of all parameters as a float """
     sum = 0
@@ -29,3 +29,6 @@ print(f"4 + 3 + 2 + 1 = {add(4, 3, 2, 1)}")
 print(f"4 * 3 * 2 = {mul(4, 3, 2)}")
 print(f"4 / 3 = {div(4, 3)}")
 print("--------------------------------------")
+
+
+sys.exit(0) # Explicit EXIT with error code
